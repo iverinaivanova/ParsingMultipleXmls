@@ -1,6 +1,6 @@
 '''
 The following script parses all xml files in a directory and counts
-the length of the abstracts and the bodytext of articles. Then appends the filename and 
+the length of the abstracts and the bodytext of the articles. Then appends the filename and 
 the lengths of the abstracts and the body of the articles to a csv file.
 
 '''
