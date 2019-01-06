@@ -1,6 +1,7 @@
 '''
 The following script parses all xml files in a directory and counts
-the length of the abstracts and the bodytext.
+the length of the abstracts and the bodytext of articles. Then appends the filename and 
+the lengths of the abstracts and the body of the articles to a csv file.
 
 '''
 import os
@@ -21,7 +22,18 @@ for filename in os.listdir(path):
         abstract = str(bodyText.text)
         words = abstract.split()
         lengths.append(len(words))
-        print(lengths)
-        print("Abstract length: ", lengths[0])
-        print("Body length: ", sum(lengths[1:len(lengths)]))
+    for fullname in range(1):
+        abst = lengths[0]
+        body = sum(lengths[1:len(lengths)])
+        print("Abstract length: ", abst)
+        print("Body length: ", body)
+        myFile = "../myFile_2.csv"
+        csvRow = [filename, abst, body]
+        with open(myFile, 'a') as f:
+            writer = csv.writer(f, dialect = "excel")
+            writer.writerow(csvRow)
+            writer.writerow(['filename', 'abst', 'body'])
+        print("Writing complete!")
+        
+        
        
