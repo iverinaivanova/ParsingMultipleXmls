@@ -1,4 +1,4 @@
-# parsing_multiple_xmls_in_a_directory
+# Parsing Multiple Xml files in a directory
 
 This script parses all xml files in a directory and counts
 the length of the abstracts and the bodytext of the articles, 
