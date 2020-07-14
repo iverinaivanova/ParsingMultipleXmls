@@ -8,7 +8,8 @@ and the count of self mentions to a csv file.
 '''
 import os
 import xml.etree.ElementTree as ET
-path = 'C:/Users/Administrator/AppData/Local/Programs/Python/Python36-32/A00'
+// Add the full path to the dorectory containing the xml files
+path = '...'
 print(path)
 for filename in os.listdir(path):
     if not filename.endswith('.xml'):continue
